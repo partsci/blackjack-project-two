@@ -1,0 +1,6 @@
+# Hiddden MacOS files
+.DS_Store
+
+
+# Dist files
+./dist
