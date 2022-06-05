@@ -138,8 +138,20 @@ void printTopBar(string player)
     print("\n", 0);
     print("█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█                           █▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n", 0);
     print("█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄                           █▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄", 0);
+    print("\n\n", 0);
+    print("    HAND VALUE | 1                                     HAND VALUE | 1\n", 0);
+    print("    HAND VALUE | 1                                     HAND VALUE | 1", 0);
 };
-
+void printBottomBar()
+{
+    print("\n\n", 0);
+    print("                           █▀▀ █░█ █▀█ █ █▀▀ █▀▀                                                      \n", 0);
+    print("                           █▄▄ █▀█ █▄█ █ █▄▄ ██▄                                                      \n", 0);
+    print("\n", 0);
+    print("                                1 | Hit\n", 0);
+    print("                                2 | Stand\n", 0);
+    print("                                3 | Fold \n", 0);
+}
 void clearScreen()
 {
     system("cls");
@@ -186,12 +198,6 @@ void handleInput(char &input, bool validate, char t1 = 'Z', char t2 = 'Y', char 
     valid = false;
 }
 
-void printTopDetails()
-{
-    print("\n\n", 0);
-    print("    HAND VALUE | 1                                     HAND VALUE | 1\n", 0);
-    print("    HAND VALUE | 1                                     HAND VALUE | 1", 0);
-};
 void newGame()
 {
     clearScreen();
@@ -202,14 +208,7 @@ void newGame()
     clearScreen();
     printTitle();
     printTopBar(player);
-    printTopDetails();
-    print("\n\n", 0);
-    print("                           █▀▀ █░█ █▀█ █ █▀▀ █▀▀                                                      \n", 0);
-    print("                           █▄▄ █▀█ █▄█ █ █▄▄ ██▄                                                      \n", 0);
-    print("\n", 0);
-    print("                                1 | Hit\n", 0);
-    print("                                2 | Stand\n", 0);
-    print("                                3 | Fold \n", 0);
+    printBottomBar();
     handleInput(input, true, '1', '2', '3', '3');
 };
 
