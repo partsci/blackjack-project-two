@@ -16,6 +16,7 @@ char input;
 
 /* Game Variables */
 string player;
+string dealer;
 
 /* Core function prototypes */
 
@@ -50,7 +51,8 @@ void print(string content, int width);
 
 void printTitle();
 void printMenu();
-char handleInput(char &input, char t1, char t2, char t3, char t4, bool validate);
+void printTopBar(string player, string dealer);
+void handleInput(char &input, bool validate, char t1, char t2, char t3, char t4);
 void newGame();
 void loadGame();
 void viewStats();
@@ -61,7 +63,7 @@ int main(int argc, char *argv[])
     {
         printTitle();
         printMenu();
-        handleInput(input, '1', '2', '3', '4', true);
+        handleInput(input, false, '1', '2', '3', '4');
         switch (input)
         {
         case '1':
@@ -106,6 +108,39 @@ void printMenu()
     return;
 }
 
+void printGameMenu(){
+
+};
+
+void printPlayerData()
+{
+    print("█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█\n", 0);
+    print("█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄\n", 0);
+    print("\n", 0);
+    print("HAND VALUE | 0\n", 0);
+    print("CARD VALUE | 10 \n", 0);
+    print("\n", 0);
+}
+void printDealerData()
+{
+    print("█▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n", 0);
+    print("█▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄\n", 0);
+    print("\n", 0);
+    print("HAND VALUE | 0\n", 0);
+    print("CARD VALUE | 10 \n", 0);
+    print("\n", 0);
+}
+void printTopBar(string player)
+{
+    print("Player Name: ", 27);
+    print(player, 0);
+    print("\n", 0);
+    print("\n", 0);
+    print("\n", 0);
+    print("█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█                           █▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n", 0);
+    print("█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄                           █▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄", 0);
+};
+
 void clearScreen()
 {
     system("cls");
@@ -129,7 +164,7 @@ void print(string content, int width)
     cout << content;
 }
 
-char handleInput(char &input, char t1 = 'Z', char t2 = 'Y', char t3 = 'X', char t4 = 'W', bool validate)
+void handleInput(char &input, bool validate, char t1 = 'Z', char t2 = 'Y', char t3 = 'X', char t4 = 'W')
 {
     do
     {
@@ -139,7 +174,7 @@ char handleInput(char &input, char t1 = 'Z', char t2 = 'Y', char t3 = 'X', char 
         {
             valid = true;
         }
-        if (input == t1 || input == t2 || input == t3 || input == t4)
+        else if (input == t1 || input == t2 || input == t3 || input == t4)
         {
             valid = true;
         }
@@ -152,11 +187,31 @@ char handleInput(char &input, char t1 = 'Z', char t2 = 'Y', char t3 = 'X', char 
     valid = false;
 }
 
+void printTopDetails()
+{
+    print("\n\n", 0);
+    print("    HAND VALUE | 1                                     HAND VALUE | 1\n", 0);
+    print("    HAND VALUE | 1                                     HAND VALUE | 1", 0);
+};
 void newGame()
 {
     clearScreen();
     printTitle();
-    handleInput(input, '0', '0', '0', '0', false);
+    print("Enter Players Name: ", 0);
+    cin >> player;
+    print("\n", 0);
+    clearScreen();
+    printTitle();
+    printTopBar(player);
+    printTopDetails();
+    print("\n\n", 0);
+    print("                           █▀▀ █░█ █▀█ █ █▀▀ █▀▀                                                      \n", 0);
+    print("                           █▄▄ █▀█ █▄█ █ █▄▄ ██▄                                                      \n", 0);
+    print("\n", 0);
+    print("                                1 | Hit\n", 0);
+    print("                                2 | Stand\n", 0);
+    print("                                3 | Fold \n", 0);
+    handleInput(input, true, '1', '2', '3', '3');
 };
 
 void loadGame() {}
