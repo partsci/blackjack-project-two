@@ -101,7 +101,6 @@ void printMenu()
 {
     print("\n", 0);
     print("1 | Start New Game\n", 0);
-    print("2 | Load Game\n", 0);
     print("3 | View Statistics \n", 0);
     print("4 | Quit\n", 0);
     print("\n", 0);
