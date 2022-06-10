@@ -83,7 +83,7 @@ int main(int argc, char **argv)
     // While loop to validate user input to ensure that is is either 1 2 or 3
     do
     {
-        cout << "Input: ", cin     >> mnCh;
+        cout << "Input: ", cin >> mnCh;
         if (mnCh != '1' && mnCh != '2' && mnCh != '3')
         {
             cout << "Invalid Selection. Try again" << endl;
@@ -119,29 +119,27 @@ int main(int argc, char **argv)
         // Main logic of game
         do
         {
-            cout << "=====BlackJack=====\n\n";
-            cout << "Player " << pNme << endl;
-            cout << " Card Dealt | " << pCD << "\n";
-            cout << " Current Hand | " << pCC << "\n";
-            cout << " Facedown Card | " << pCP << "\n";
-            cout << " Total Count | " << pCC + pCP << "\n\n";
-
-            cout << "Dealer " << dNme << endl;
-            cout << " Card Dealt | " << dCD << "\n";
-            cout << " Current Hand | " << dCC << "\n";
-            cout << " Facedown Card | "
-                 << "Hidden"
-                 << "\n";
-            cout << " Total Count | Hidden \n\n";
-            cout << pNme << ",\ndo you Hit or Stand?\n";
-            cout << " 1 | Hit\n";
-            cout << " 2 | Stand\n";
+            cout << "                           =====BLACK JACK=====                            \n\n";
+            cout << "█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█                           █▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n";
+            cout << "█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄                           █▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄";
+            cout << "\n\n";
+            cout << "     Card Dealt | " << pCD << setw(50) << "     Card Dealt | " << dCD << "\n";
+            cout << "   Current Hand | " << pCD << setw(50) << "   Current Hand | " << dCD << "\n";
+            cout << "  Facedown Card | " << pCD << setw(50) << "Facedown Card | " << dCD << "\n";
+            cout << "     Card Dealt | " << pCD << setw(50) << " Card Dealt | " << dCD << "\n";
+            cout << "                           █▀▀ █░█ █▀█ █ █▀▀ █▀▀                                                      \n";
+            cout << "                           █▄▄ █▀█ █▄█ █ █▄▄ ██▄                                                      \n\n";
+            cout << setw(40) << pNme << "\n\n";
+            cout << "                                  1 | Hit\n";
+            cout << "                                  2 | Stand\n";
+            cout << "                                  3 | Fold\n";
+            cout << "                                  1 | Hit\n\n";
             vd = false;
 
             // Validate input fields to ensure they are only 1 or 2
             do
             {
-                cout << "Type Selection: ", cin >> pCh;
+                cout << "                            Type Selection: ", cin >> pCh;
                 if (pCh != '1' && pCh != '2')
                 {
                     cout << "Invalid Selection. Try again" << endl;
