@@ -83,7 +83,7 @@ int main(int argc, char **argv)
     // While loop to validate user input to ensure that is is either 1 2 or 3
     do
     {
-        cout << "Type Selection: ", cin     >> mnCh;
+        cout << "Input: ", cin     >> mnCh;
         if (mnCh != '1' && mnCh != '2' && mnCh != '3')
         {
             cout << "Invalid Selection. Try again" << endl;
