@@ -149,10 +149,8 @@ void clearConsole()
 }
 void printTopBar()
 {
-    cout << "█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█       "
-            "█▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n";
-    cout << "█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄       "
-            "█▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄\n\n";
+    cout << "█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█       ""█▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n";
+    cout << "█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄       ""█▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄\n\n";
 }
 
 void printTopData(int pCV, int pFDCV, int pHV, int dCV, int dFDCV, int dHV)

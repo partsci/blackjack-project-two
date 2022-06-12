@@ -332,7 +332,8 @@ void printChoice(string pNme)
 }
 void printPlayerData(string pNme, unsigned int pCD, unsigned int pCC, unsigned int pCP)
 {
-    cout << "Player " << pNme << endl;
+    cout << "█▀█ █░░ ▄▀█ █▄█ █▀▀ █▀█\n";
+    cout << "█▀▀ █▄▄ █▀█ ░█░ ██▄ █▀▄\n";
     cout << " Card Dealt | " << printCard(pCD) << "\n";
     cout << " Current Hand | " << pCC << "\n";
     cout << " Facedown Card | " << printCard(pCP) << "\n";
@@ -352,7 +353,8 @@ void print(char data)
 }
 void printDealerData(string dNme, unsigned int dCD, unsigned int dCC)
 {
-    cout << "Dealer " << dNme << endl;
+    cout << "█▀▄ █▀▀ ▄▀█ █░░ █▀▀ █▀█\n";
+    cout << "█▄▀ ██▄ █▀█ █▄▄ ██▄ █▀▄\n";
     cout << " Card Dealt | " << printCard(dCD) << "\n";
     cout << " Current Hand | " << dCC << "\n";
     cout << " Facedown Card | "
