@@ -10,6 +10,7 @@ const int CARD_VALUES[11] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 const string CARD_FACES[11] = {"ACE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN"};
 
 // Execution Begins Here!
+void printTitle();
 void print(int);
 void print(char);
 void print(string);
@@ -221,6 +222,7 @@ int main(int argc, char **argv)
 void printMainMenu(float vsn)
 {
     cout << "=====Welcome To BlackJack Version" << vsn << "=====\n";
+
     cout << "It's Las Vegas but at home!\n";
 
     cout << "\n";
@@ -229,6 +231,20 @@ void printMainMenu(float vsn)
     cout << " 1 | New Game\n";
     cout << " 2 | Display Player Wins \n";
     cout << " 3 | Quit\n";
+}
+void printTitle()
+{
+    print("██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░░░░░██╗░█████╗░░█████╗░██╗░░██╗");
+    cout << "\n";
+    print("██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝░░░░░██║██╔══██╗██╔══██╗██║░██╔╝");
+    cout << "\n";
+    print("██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░░░░░░██║███████║██║░░╚═╝█████═╝░");
+    cout << "\n";
+    print("██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░██╗░░██║██╔══██║██║░░██╗██╔═██╗░");
+    cout << "\n";
+    print("██████╦╝███████╗██║░░██║╚█████╔╝██║░╚██╗╚█████╔╝██║░░██║╚█████╔╝██║░╚██╗");
+    cout << "\n";
+    print("╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝");
 }
 bool someoneBusted(unsigned int pCC, unsigned int pCP, unsigned int dCC, unsigned int dCP)
 {
